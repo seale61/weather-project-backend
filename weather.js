@@ -43,7 +43,7 @@ async function loadWeatherData(city_ids) {
         ]
 
         await loadDataTable(current);
-        console.log(current);
+
     }
 
     process.exit(0);
@@ -165,7 +165,7 @@ function mysqlConnect(mysql) {
         if (err) {
             process.exit();
         }
-        console.log(`MySql Connected ${process.env.DATABASE}`);
+
     });
 
     return db;
