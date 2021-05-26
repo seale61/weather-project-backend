@@ -4,11 +4,16 @@ const http   = require('axios');
 const util   = require('util'); 
 
 const dbconn = mysqlConnect(mysql);
+
+/* 
+    Promisify allows us to access our data and make it accessible without 
+    the need of using a callback function.
+*/
 const query = util.promisify(dbconn.query).bind(dbconn);
 
 const city_ids = [
-    '4183899',
-    '4180439'
+    '4180439',  // Atlanta, GA
+    '5128581'   // New York, NY
 ];
 
 loadWeatherData(city_ids);
@@ -27,7 +32,7 @@ async function loadWeatherData(city_ids) {
         current_results = current_results.data;
 
         let current = [
-            await convertDateTime(current_results.dt, current_results.timezone),
+            convertDateTime(current_results.dt, current_results.timezone),
             current_results.weather[0].id,
             Math.round(current_results.main.temp),
             Math.round(current_results.main.humidity),
@@ -37,7 +42,7 @@ async function loadWeatherData(city_ids) {
             current_results.name,
         ]
 
-        await loadDataTable(current);
+        //await loadDataTable(current);
         console.log(current);
     }
 
@@ -45,6 +50,8 @@ async function loadWeatherData(city_ids) {
 }
 
 async function loadDataTable(data) {
+
+    // We will later make this insert statement a stored procedure call
 
     let sql = `INSERT INTO weather_history_hourly (
                     date_time, 
@@ -58,16 +65,14 @@ async function loadDataTable(data) {
                 ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)`;
 
     try {
-
         await query(sql, data);
-    
     } catch(err) {
         console.log(err);
     }
 
 }
 
-async function convertDateTime(utc, offset) { 
+function convertDateTime(utc, offset) { 
 
     if(offset < 0) {
         utc -= Math.abs(offset);
@@ -76,10 +81,16 @@ async function convertDateTime(utc, offset) {
         utc += Math.abs(offset);
     }
 
-    var t = new Date(1970, 0, 1); // Epoch
+    var t = new Date(1970, 0, 1); // Current epoch
     t.setSeconds(utc);
 
     let d = new Date(t);
+
+    /*
+        The following "if" statements makes sure that there is a zero padding 
+        the numbers if the numbers are less than 10. This is to ensure the date 
+        and times are formatted correctly.
+    */
 
     let minutes = d.getMinutes();
     if(minutes == 0) {
@@ -112,6 +123,7 @@ function convert_pressure(mb) {
 }
 
 function windDirection(degree) {
+
     if (degree > 337.5) {
         return 'N';
     }
@@ -130,10 +142,10 @@ function windDirection(degree) {
     if(degree > 122.5) {
         return 'SE';
     }
-    if(degree>67.5) {
+    if(degree > 67.5) {
         return 'E';
     }
-    if(degree>22.5) {
+    if(degree > 22.5) {
         return 'NE';
     }
     return 'N';
