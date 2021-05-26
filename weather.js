@@ -42,7 +42,7 @@ async function loadWeatherData(city_ids) {
             current_results.name,
         ]
 
-        //await loadDataTable(current);
+        await loadDataTable(current);
         console.log(current);
     }
 
