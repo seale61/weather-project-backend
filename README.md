@@ -32,5 +32,7 @@ In order to for your script to collect curremt weather data every hour, you will
   
 Save this file and make it executable using 'chmod +x weather.sh'  at the terminal command line.
 
-##c rontab
+## crontab
+In a terminal window, enter "crontab -e" and enter the following line (using your own path to your shell script:
+    */60 * * * * /apps/node-scripts/weather/weather.sh >/dev/null 2>&1
 
