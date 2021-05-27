@@ -16,7 +16,7 @@ This is the database script that will create the neccessary tables and load the 
 In order to access the APIs, you will need to create a free account and get an API key from [OpenWeatherMap.org](https://home.openweathermap.org). Once you have created an account and acquired and API key, subscribe to the "**Current Weather Data**" API, and optionally, "**One Call**" API. The "One Call" API will be used in a future tutorial, so if you wish to continue after this round, you might want to go ahead and subscribe to it now. These APIs are free to use, but there are some restrictions involved in how many times they can be accessed in a given time frame from a the same IP address. Please read the documentation.  
 
 ## .env
-This project will require you to use a .env file to securely hold your database connection information and your OpenWeatherMap API key. Your .env file should contain the follow information.
+This project will require you to use a .env file to securely hold your database connection information and your OpenWeatherMap API key. Your .env file should contain the following information.
   
 DB_HOST=localhost  
 DB_USER=your_database_username  
