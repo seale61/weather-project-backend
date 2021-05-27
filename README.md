@@ -23,7 +23,7 @@ DB_PASS=your_database_password
 DATABASE=weather  
 WEATHERKEY=your_api_key   
 
-## Shell script  
+## Shell script  (Linux/UNIX/Mac only)
 In order to for your script to collect curremt weather data every hour, you will need to create a shell script to change into the right directory and actually run your script.  To do this create a text file called '"weather.sh" and enter the following using the actual path to you weather.js script:  
   
     #!/bin/sh    
@@ -32,10 +32,13 @@ In order to for your script to collect curremt weather data every hour, you will
   
 Save this file and make it executable using 'chmod +x weather.sh'  at the terminal command line.
 
-## crontab
+## crontab (Linux/UNIX/Mac only)
 In a terminal window, enter "crontab -e" at the command line. You may be given a choice of editors. I generally recommend nano. When the editor comes up, enter the following line (using your own path to your shell script:  
   
     `*/60 * * * * /apps/node-scripts/weather/weather.sh >/dev/null 2>&1`  
   
-Save your crontab entry, and your script will run in the background at the top of every hour.
+Save your crontab entry, and your script will run in the background at the top of every hour.  
+
+*** If you are not running a server version of your OS, you may have to install crontab.
+*** Windows users will need to use a batch file and Windows scheduler.
 
