@@ -9,7 +9,7 @@ cd into weather-project-backend
 run npm install  
   
 ## weather.sql
-This is the database script that will create the neccessary tables and load the cities_us table. The cities_us table contains the id, name, and geolocation for every incorporated city in the United States. The data for nearly every city on earth can be found [here](http://bulk.openweathermap.org/sample/city.list.json.gz).  
+This is the database script that will create the neccessary tables and load the cities_us table. The cities_us table contains the id, name, and geolocation for every incorporated city in the United States. A JSON file containing data for nearly every city on earth can be found [here](http://bulk.openweathermap.org/sample/city.list.json.gz). Warning, this is a very large file.
 
 ## API Key
 In order to access the APIs, you will need to create a free account and get an API key from [OpenWeatherMap.org](https://home.openweathermap.org). Once you have created an account and acquired and API key, subscribe to the "**Current Weather Data**" API, and optionally, "**One Call**" API. The "One Call" API will be used in a future tutorial, so if you wish to continue after this round, you might want to go ahead and subscribe to it now. These APIs are free to use, but there are some restrictions involved in how many times they can be accessed in a given time frame from a the same IP address. Please read the documentation.  
