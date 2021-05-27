@@ -3,7 +3,7 @@
 This is a tutorial for creating a Node script for collecting weather data from openweathermap.org and storing it in a MariaDB or MySQL database. This script will be run via crontab using a shell script every 60 minutes in order to create historical data. This data will later be used to create a dashboard that will display weather trends over time for a given city (or cities).  
 
 ## Installation
-From a terminal command line, lone this repository by entering:  
+If you don't have **git** installed, be sure to do this first. From a terminal command line, clone this repository by entering:  
   `git clone <https://github.com/seale61/weather-project-backend.git>`  
 cd into weather-project-backend  
 run npm install  
