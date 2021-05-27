@@ -17,7 +17,9 @@ In order to access the APIs, you will need to create a free account and API key 
 This project will require you to use a .env file to securely hold you database connection information and your OpenWeatherMap API key.  
   
 DB_HOST=localhost  
-DB_USER=your_username  
-DB_PASS=your_password  
+DB_USER=your_database_username  
+DB_PASS=your_database_password  
 DATABASE=weather  
-WEATHERKEY=your_api_key  
+WEATHERKEY=your_api_key   
+
+
