@@ -23,4 +23,5 @@ DB_PASS=your_database_password
 DATABASE=weather  
 WEATHERKEY=your_api_key   
 
+## Shell script and crontab 
 
