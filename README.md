@@ -1,5 +1,5 @@
 # weather-project-backend
-Weather tracking tutorial - Part 1. Node script for collecting weather data from openweathermap.org and storing it in a MariaDB database  
+Weather tracking tutorial - Part 1. Node script for collecting weather data from openweathermap.org and storing it in a MariaDB database. This script will be run via crontab using a shell script every 60 minutes in order to create historical data. This data will later be used to create a dashboard that display weather trends over time for a given city (or cities).  
 
 ## Installation
 Clone this repository with  
