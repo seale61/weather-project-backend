@@ -24,4 +24,8 @@ DATABASE=weather
 WEATHERKEY=your_api_key   
 
 ## Shell script and crontab 
+In order to for your script to collect curremt weather data every hour, you will need to create a shell script to change into the right directory and actually run your script.  To do this create a text file called '"weather.sh" and enter the following:
+`#!/bin/sh
+cd /apps/node-scripts/weather
+node weather.js`
 
