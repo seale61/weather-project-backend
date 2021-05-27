@@ -5,7 +5,7 @@ This is a tutorial for creating a Node script for collecting weather data from o
 ## Installation
 If you don't have **git** installed, be sure to do this first. From a terminal command line, clone this repository by entering:   
   
-  `git clone <https://github.com/seale61/weather-project-backend.git>`  
+    git clone <https://github.com/seale61/weather-project-backend.git>  
   
 cd into weather-project-backend  
 run **npm install**  
