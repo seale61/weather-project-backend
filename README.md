@@ -21,11 +21,11 @@ In order to access the APIs, you will need to create a free account and get an A
 ## .env
 This project will require you to use a .env file to securely hold your database connection information and your OpenWeatherMap API key. Your .env file should contain the following information.
   
-DB_HOST=localhost  
-DB_USER=your_database_username  
-DB_PASS=your_database_password  
-DATABASE=weather  
-WEATHERKEY=your_api_key   
+    DB_HOST=localhost  
+    DB_USER=your_database_username  
+    DB_PASS=your_database_password  
+    DATABASE=weather  
+    WEATHERKEY=your_api_key   
 
 ## Shell script  (Linux/MacOS only)
 In order to for your script to collect curremt weather data every hour, you will need to create a shell script to change into the right directory and actually run your script.  To do this, create a text file called '"weather.sh" and enter the following using the actual path to your weather.js script:  
