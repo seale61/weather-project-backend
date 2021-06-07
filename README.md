@@ -48,7 +48,7 @@ In a terminal window, enter "crontab -e" at the command line. You may be given a
     */60 * * * * /path/to/your/script/weather.sh >/dev/null 2>&1  
     5 0 * * * /path/to/your/script/weather-daily.sh >/dev/null 2>&1
   
-Save your crontab entry, and your script will run in the background at the top of every hour.  
+Save your crontab entry. Weather.sh will run in the background at the top of every hour, and weather-daily.sh will run at 5 minutes after midnight each day.  
   
 If you are not running a server version of your OS, you may have to install crontab.  
 Windows users will need to use a batch file and Windows scheduler.  
