@@ -43,9 +43,10 @@ Create another file called weather-daily.sh and enter the following (again, use 
 Save these files and make chem executable using 'chmod +x <filename>'  at the terminal command line.
 
 ## Crontab (Linux/MacOS only)
-In a terminal window, enter "crontab -e" at the command line. You may be given a choice of editors. I generally recommend nano. When the editor comes up, enter the following line (using your own path to your shell script):  
+In a terminal window, enter "crontab -e" at the command line. You may be given a choice of editors. I generally recommend nano. When the editor comes up, enter the following lines (using your own path to your shell script):  
   
     */60 * * * * /path/to/your/script/weather.sh >/dev/null 2>&1  
+    5 0 * * * /apps/node-scripts/weather/weather-daily.sh >/dev/null 2>&1
   
 Save your crontab entry, and your script will run in the background at the top of every hour.  
   
