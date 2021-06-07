@@ -12,8 +12,10 @@ const dbconn = mysqlConnect(mysql);
 const query = util.promisify(dbconn.query).bind(dbconn);
 
 const city_ids = [
-    '4180439',  // Atlanta, GA
-    '5128581'   // New York, NY
+    '4180439',   // Atlanta, GA
+    '5128581',   // New York, NY
+    '5861897',   // Fairbanks, AK
+    '5322053'    // Yuma, AZ
 ];
 
 loadWeatherData(city_ids);
