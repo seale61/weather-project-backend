@@ -32,7 +32,13 @@ In order to for your script to collect curremt weather data every hour, you will
     cd /path/to/your/node/script  
     node weather.js  
   
-Save this file and make it executable using 'chmod +x weather.sh'  at the terminal command line.
+Create another file called weather-daily.sh and enter the following (again, use your own path):  
+
+    #!/bin/sh  
+    cd /path/to/your/node/script  
+    node weather_daily.js
+
+Save these files and make chem executable using 'chmod +x <filename>'  at the terminal command line.
 
 ## Crontab (Linux/MacOS only)
 In a terminal window, enter "crontab -e" at the command line. You may be given a choice of editors. I generally recommend nano. When the editor comes up, enter the following line (using your own path to your shell script):  
