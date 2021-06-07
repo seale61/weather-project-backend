@@ -5,7 +5,7 @@ const util   = require('util');
 
 const dbconn = mysqlConnect(mysql);
 
-/* 
+/*  
     Promisify allows us to make our results accessible without 
     the need of using a callback function.
 */
@@ -165,6 +165,8 @@ function mysqlConnect(mysql) {
         if (err) {
             process.exit();
         }
+
+        console.log('Mysql has been connected');
 
     });
 
