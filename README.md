@@ -11,7 +11,7 @@ cd into weather-project-backend
 run **npm install**  
   
 ## weather.sql
-This is the database script that will create the neccessary tables and load the cities_us table. The cities_us table contains the id, name, and geolocation for every incorporated city in the United States. A JSON file containing data for nearly every city on earth can be found [here](http://bulk.openweathermap.org/sample/city.list.json.gz) - **note**, this is a very large file. You can run this script from the terminal command line if you MySQL or MariaDB installed (you will be prompted for a password when using the "-p" switch):  
+This is the database script that will create the neccessary tables and load the cities_us table. The cities_us table contains the id, name, and geolocation for every incorporated city in the United States. A JSON file containing data for nearly every city on earth can be found [here](http://bulk.openweathermap.org/sample/city.list.json.gz) - **note**, this is a very large file. You can run this script from the terminal command line if you have MySQL or MariaDB installed (you will be prompted for a password when using the "-p" parameter):  
 
     mysql -u <username> -p < weather.sql
 
