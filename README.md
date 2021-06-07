@@ -1,7 +1,7 @@
 # weather-project-backend  
 ## Weather Tracking Tutorial - Part 1
 This is a tutorial for creating two nodejs scripts: 
-* weather.js - collects weather data from openweathermap.org and stores it in a table called weather_history_hourly. This script will be run via crontab using a shell script every 60 minutes in order to create historical weather data. 
+* weather.js - collects current weather data from openweathermap.org and stores it in a table called weather_history_hourly. This script will be run via crontab using a shell script every 60 minutes in order to create historical weather data. 
 * weather_daily.js - processes the data and stores the highs and lows for the previous date (or a given date) in a table called weather_history_daily.  The script will be run once a day at 12:05 AM via crontab using shell script.  
 This data will later be used to create a dashboard that will display weather trends over time for a given city (or cities).  
 
