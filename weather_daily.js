@@ -14,7 +14,7 @@ const query = util.promisify(dbconn.query).bind(dbconn);
 /*
     If you wish to process a particular date you can enter it with the command in YYYY-MM-DD format
     example:  node weather_daily.js 2021-06-01
-    
+
 */
 
 let date = process.argv[2];
@@ -144,6 +144,7 @@ async function getData(yesterday, station) {
 }
 
 function mysqlConnect(mysql) {
+
     // Create connection
     const db = mysql.createConnection({
         host     : process.env.DB_HOST,
@@ -152,7 +153,6 @@ function mysqlConnect(mysql) {
         database : process.env.DATABASE  
     });
 
-    // Connect
     db.connect((err) => {
         if (err) {
             console.log(err);
