@@ -31,7 +31,7 @@ This project will require you to create a file called '.env' to securely hold yo
     WEATHERKEY=your_api_key   
 
 ## Shell script  (Linux/MacOS only)
-In order to for your script to collect curremt weather data every hour, you will need to create a shell script to change into the right directory and actually run your script.  To do this, create a text file called '"weather.sh" and enter the following using the actual path to your weather.js script:  
+In order for your script to collect curremt weather data every hour, you will need to create a shell script to change into the right directory and actually run your script.  To do this, create a text file called '"weather.sh" and enter the following using the actual path to your weather.js script:  
   
     #!/bin/sh    
     cd /path/to/your/node/script  
