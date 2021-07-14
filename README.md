@@ -1,6 +1,6 @@
 # weather-project-backend  
 ## Full Stack Development Tutorial - Part 1
-This is a tutorial for creating two nodejs scripts: 
+In this tutorial, we create two data collection scripts using node: 
 * weather.js - collects current weather data from openweathermap.org and stores it in a table called weather_history_hourly. This script will be run via crontab using a shell script every 60 minutes in order to create historical weather data. 
 * weather_daily.js - processes the data and stores the highs and lows for the previous date (or a given date) in a table called weather_history_daily.  The script will be run once a day at 12:05 AM via crontab using shell script.  
 This data will later be used to create a dashboard that will display weather trends over time for a given city (or cities).  
@@ -19,7 +19,7 @@ This is the database script that will create the neccessary database and tables,
     mysql -u <username> -p < weather.sql
 
 ## API Key
-In order to access the APIs, you will need to create a free account and get an API key from [OpenWeatherMap.org](https://home.openweathermap.org). Once you have created an account and acquired an API key, subscribe to the "**Current Weather Data**" API, and optionally, "**One Call**" API. The "One Call" API will be used in a future tutorial, so if you wish to continue after this round, you might want to go ahead and subscribe to it now. These APIs are free to use, but there are some restrictions involved in how many times they can be accessed in a given time frame from a the same IP address. Please read the documentation.  
+In order to access the OpenWeatherMap APIs, you will need to create a free account and get an API key from [OpenWeatherMap.org](https://home.openweathermap.org). Once you have created an account and acquired an API key, subscribe to the "**Current Weather Data**" API, and optionally, "**One Call**" API. The "One Call" API will be used in a future tutorial, so if you wish to continue after this round, you might want to go ahead and subscribe to it now. These APIs are free to use, but there are some restrictions involved in how many times they can be accessed in a given time frame from a the same IP address. Please read the documentation.  
 
 ## .env
 This project will require you to create a file called '.env' to securely hold your database connection information and your OpenWeatherMap API key. Your .env file should contain the following information.
@@ -43,7 +43,7 @@ Create another file called weather-daily.sh and enter the following (again, use 
     cd /path/to/your/node/script  
     node weather_daily.js
 
-Save these files and make chem executable using 'chmod +x <filename>'  at the terminal command line.
+Save these files and make them executable using 'chmod +x <filename>'  at the terminal command line.
 
 ## Crontab (Linux/MacOS only)
 In a terminal window, enter "crontab -e" at the command line. You may be given a choice of editors. I generally recommend nano. When the editor comes up, enter the following lines (using your own path to your shell script):  
